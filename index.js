@@ -8,7 +8,7 @@ const typeDefs = gql`
   }
 `;
 
-// Provide resolver functions for your schema fields
+// Provide resolver functions for your schema fields 1
 const resolvers = {
   Query: {
     hello: () => 'Hello world!',
