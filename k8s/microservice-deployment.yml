@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-app
+  namespace: test-namespace
+  labels:
+    app: microservice-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservice-app
+  template:
+    metadata:
+      labels:
+        app: microservice-app
+    spec:
+      containers:
+        - image: gcr.io/gcloud-project-2211329/node-git-actions-test-ext
+          imagePullPolicy: Always
+          name: microservice-app

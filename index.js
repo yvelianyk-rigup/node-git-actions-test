@@ -15,7 +15,9 @@ const resolvers = {
   Query: {
     helloMicroservice: async () => {
       // Returns it from other microservice
-      const res = await axios.get('http://localhost:3000');
+      let MICROSERVICE_URL = process.env.MICROSERVICE_URL;
+      let MICROSERVICE_PORT = process.env.MICROSERVICE_PORT;
+      const res = await axios.get(`${MICROSERVICE_URL}:${MICROSERVICE_PORT}`);
       return res.data;
     },
     helloSelf: async () => {

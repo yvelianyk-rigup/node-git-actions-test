@@ -19,3 +19,8 @@ spec:
         - image: gcr.io/gcloud-project-2211329/node-git-actions-test
           imagePullPolicy: Always
           name: application
+          env:
+            - name: MICROSERVICE_URL
+              value: 'application-microservice'
+            - name: MICROSERVICE_PORT
+              value: '3000'
