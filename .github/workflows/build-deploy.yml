@@ -62,12 +62,12 @@ jobs:
       - name: Build
         run: |-
           docker build \
-            --tag "gcr.io/$PROJECT_ID/$IMAGE:latest" \
+            --tag "gcr.io/$PROJECT_ID/$IMAGE:v${{steps.package-version.outputs.current-version}}" \
             .
       # Push the Docker image to Google Container Registry
       - name: Publish
         run: |-
-          docker push "gcr.io/$PROJECT_ID/$IMAGE:latest"
+          docker push "gcr.io/$PROJECT_ID/$IMAGE:v${{steps.package-version.outputs.current-version}}"
 
       # Build the Docker image for the external Microservice
       - name: Build
