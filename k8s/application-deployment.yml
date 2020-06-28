@@ -21,6 +21,6 @@ spec:
           name: application
           env:
             - name: MICROSERVICE_URL
-              value: 'application-microservice'
+              value: 'microservice-app'
             - name: MICROSERVICE_PORT
               value: '3000'
