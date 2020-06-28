@@ -6,7 +6,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - name: "application-service"
+    - name: 'application-service'
       port: 4000
       targetPort: 4000
   selector:
