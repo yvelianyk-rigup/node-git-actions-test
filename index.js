@@ -1,17 +1,26 @@
 const express = require('express');
+const axios = require('axios');
 const { ApolloServer, gql } = require('apollo-server-express');
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
   type Query {
-    hello: String
+    helloMicroservice: String
+    helloSelf: String
   }
 `;
 
 // Provide resolver functions for your schema fields 1
 const resolvers = {
   Query: {
-    hello: () => 'Hello world!',
+    helloMicroservice: async () => {
+      // Returns it from other microservice
+      const res = await axios.get('http://localhost:3000');
+      return res.data;
+    },
+    helloSelf: async () => {
+      return 'Hello World!';
+    },
   },
 };
 

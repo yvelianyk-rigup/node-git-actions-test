@@ -1,0 +1,6 @@
+node_modules
+.dockerignore
+Dockerfile
+util
+README
+auth0-k8s.yaml
