@@ -17,8 +17,8 @@ const resolvers = {
       // Returns it from other microservice
       const { MICROSERVICE_URL } = process.env;
       const { MICROSERVICE_PORT } = process.env;
-      console.log('URL: ', MICROSERVICE_URL);// TODO: remove it
-      console.log('PORT: ', MICROSERVICE_PORT);// TODO: remove it
+      console.log('URL: ', MICROSERVICE_URL); // TODO: remove it
+      console.log('PORT: ', MICROSERVICE_PORT); // TODO: remove it
       const res = await axios.get(`${MICROSERVICE_URL}:${MICROSERVICE_PORT}`);
       return res.data;
     },
