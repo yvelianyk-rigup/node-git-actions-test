@@ -11,7 +11,7 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT_ID }}
   GKE_CLUSTER: my-first-cluster-1
   GKE_ZONE: us-central1-a
-  IMAGE: ${{ github.repository }}
+  IMAGE: node-git-actions-test
 
 jobs:
   lint-test:
