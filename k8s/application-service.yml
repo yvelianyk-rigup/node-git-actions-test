@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: application
+  namespace: test-namespace
+spec:
+  type: LoadBalancer
+  ports:
+    - name: "application-service"
+      port: 4000
+      targetPort: 4000
+  selector:
+    app: application

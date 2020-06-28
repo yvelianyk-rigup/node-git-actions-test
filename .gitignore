@@ -105,3 +105,4 @@ dist
 .idea
 junit.xml
 .coverage/
+service-account.json

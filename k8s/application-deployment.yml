@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application
+  namespace: test-namespace
+  labels:
+    app: application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: application
+  template:
+    metadata:
+      labels:
+        app: application
+    spec:
+      containers:
+        - image: gcr.io/gcloud-project-2211329/node-git-actions-test
+          imagePullPolicy: Always
+          name: application
