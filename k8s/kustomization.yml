@@ -6,3 +6,6 @@ resources:
   - application-service.yml
 
 namespace: test-namespace
+
+commonLabels:
+  app: application
