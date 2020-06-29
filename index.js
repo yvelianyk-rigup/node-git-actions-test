@@ -23,7 +23,7 @@ const resolvers = {
       return res.data;
     },
     helloSelf: async () => {
-      return 'Hello World!';
+      return 'Hello World Test!';
     },
   },
 };
